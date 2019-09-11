@@ -10,6 +10,12 @@ import UIKit
 
 class ShowsViewController: UIViewController {
 
+  @IBOutlet weak var showsSearchBar: UISearchBar!
+  
+  @IBOutlet weak var showsTableView: UITableView!
+  
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
