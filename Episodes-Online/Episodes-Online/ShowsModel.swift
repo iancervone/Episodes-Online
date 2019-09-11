@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+struct Show: Codable {
+  let name: String
+  let rating: Rating
+  let image: Image
+}
+
+struct Rating: Codable {
+  let average: Double
+}
+
+struct Image: Codable {
+  let medium: String
+  let original: String
+}

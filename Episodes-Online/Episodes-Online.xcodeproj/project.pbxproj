@@ -15,6 +15,9 @@
 		3C014BB6232910BA00C400D6 /* Episodes_OnlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C014BB5232910BA00C400D6 /* Episodes_OnlineTests.swift */; };
 		3C014BC3232911B300C400D6 /* ShowsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C014BC2232911B300C400D6 /* ShowsModel.swift */; };
 		3C014BC5232913C200C400D6 /* ShowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C014BC4232913C200C400D6 /* ShowsTableViewCell.swift */; };
+		3C014BC72329233600C400D6 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C014BC62329233600C400D6 /* NetworkHelper.swift */; };
+		3C014BC9232923AF00C400D6 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C014BC8232923AF00C400D6 /* AppError.swift */; };
+		3C014BCC2329246000C400D6 /* ProjectAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C014BCB2329246000C400D6 /* ProjectAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		3C014BB7232910BA00C400D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C014BC2232911B300C400D6 /* ShowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsModel.swift; sourceTree = "<group>"; };
 		3C014BC4232913C200C400D6 /* ShowsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsTableViewCell.swift; sourceTree = "<group>"; };
+		3C014BC62329233600C400D6 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		3C014BC8232923AF00C400D6 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		3C014BCB2329246000C400D6 /* ProjectAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				3C014B9F232910B800C400D6 /* Episodes-Online */,
+				3C014BCA232923E300C400D6 /* HelperFiles */,
 				3C014BB4232910BA00C400D6 /* Episodes-OnlineTests */,
 				3C014B9E232910B800C400D6 /* Products */,
 			);
@@ -100,6 +107,16 @@
 				3C014BB7232910BA00C400D6 /* Info.plist */,
 			);
 			path = "Episodes-OnlineTests";
+			sourceTree = "<group>";
+		};
+		3C014BCA232923E300C400D6 /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3C014BC62329233600C400D6 /* NetworkHelper.swift */,
+				3C014BCB2329246000C400D6 /* ProjectAPIClient.swift */,
+				3C014BC8232923AF00C400D6 /* AppError.swift */,
+			);
+			path = HelperFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +222,9 @@
 			files = (
 				3C014BA3232910B800C400D6 /* ShowsViewController.swift in Sources */,
 				3C014BA1232910B800C400D6 /* AppDelegate.swift in Sources */,
+				3C014BC9232923AF00C400D6 /* AppError.swift in Sources */,
+				3C014BCC2329246000C400D6 /* ProjectAPIClient.swift in Sources */,
+				3C014BC72329233600C400D6 /* NetworkHelper.swift in Sources */,
 				3C014BC5232913C200C400D6 /* ShowsTableViewCell.swift in Sources */,
 				3C014BC3232911B300C400D6 /* ShowsModel.swift in Sources */,
 			);
