@@ -9,7 +9,11 @@
 import Foundation
 
 struct ShowResponse: Codable {
-  let shows: Show
+  let shows: Show?
+  
+  private enum codingKeys: String, CodingKey {
+    case shows = "show"
+  }
 }
 
 struct Show: Codable {
@@ -17,9 +21,9 @@ struct Show: Codable {
   let rating: Rating
   let image: Image
   
-  static func getShows(from jsonData: Data) throws -> [Show] {
-    let response = try JSONDecoder().decode(ShowResponse.self, from: jsonData)
-    return [response.shows].self
+  static func getShows(from jsonData: Data) throws -> [ShowResponse] {
+    let response = try JSONDecoder().decode([ShowResponse].self, from: jsonData)
+    return response
   }
 }
 

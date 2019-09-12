@@ -2,4 +2,100 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Episodes-Online/ShowsViewController.swift"
+            timestampString = "590012111.788595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "shows"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Episodes_Online.ShowsViewController.shows.modify : Swift.Array&lt;Episodes_Online.ShowResponse&gt;"
+                  moduleName = "Episodes-Online"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ian/Desktop/Pursuit%206.1/Unit%203/Episodes-Online/Episodes-Online/Episodes-Online/ShowsViewController.swift"
+                  timestampString = "590012111.809088"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Episodes_Online.ShowsViewController.shows.modify : Swift.Array&lt;Episodes_Online.ShowResponse&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Episodes-Online"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ian/Desktop/Pursuit%206.1/Unit%203/Episodes-Online/Episodes-Online/Episodes-Online/ShowsViewController.swift"
+                  timestampString = "590012111.815299"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Episodes_Online.ShowsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Episodes_Online.ShowsViewController"
+                  moduleName = "Episodes-Online"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ian/Desktop/Pursuit%206.1/Unit%203/Episodes-Online/Episodes-Online/Episodes-Online/ShowsViewController.swift"
+                  timestampString = "590012111.825654"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "415">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Episodes_Online.ShowsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Episodes_Online.ShowsViewController&gt;"
+                  moduleName = "Episodes-Online"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ian/Desktop/Pursuit%206.1/Unit%203/Episodes-Online/Episodes-Online/Episodes-Online/ShowsViewController.swift"
+                  timestampString = "590012111.827157"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "335">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Episodes-Online/ShowsViewController.swift"
+            timestampString = "590012111.789201"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

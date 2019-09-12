@@ -45,7 +45,7 @@ struct ShowsAPIClient {
   static let manager = ShowsAPIClient()
 //  let showsURL = "http://api.tvmaze.com/search/shows?q=girls"
 
-  func getShows(completionHandler: @escaping (Result<[Show], AppError>) -> Void) {
+  func getShows(completionHandler: @escaping (Result<[ShowResponse], AppError>) -> Void) {
     NetworkHelper.manager.getData(from: showsURL) { result in
       switch result {
       case let .failure(error):
@@ -67,7 +67,7 @@ struct ShowsAPIClient {
   // MARK: - Private Properties and Initializers
 
   private var showsURL: URL {
-    guard let url = URL(string: "http://api.tvmaze.com/search/shows?q=girls") else {
+    guard let url = URL(string: "https://api.tvmaze.com/search/shows?q=girls") else {
       fatalError("Error: Invalid URL")
     }
     return url
