@@ -26,7 +26,7 @@ class ShowsViewController: UIViewController {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 190
+    return 250
   }
   
 //  func loadData() {
