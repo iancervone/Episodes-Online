@@ -8,10 +8,19 @@
 
 import Foundation
 
+struct ShowResponse: Codable {
+  let shows: Show
+}
+
 struct Show: Codable {
   let name: String
   let rating: Rating
   let image: Image
+  
+  static func getShows(from jsonData: Data) throws -> [Show] {
+    let response = try JSONDecoder().decode(ShowResponse.self, from: jsonData)
+    return [response.shows].self
+  }
 }
 
 struct Rating: Codable {

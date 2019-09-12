@@ -17,7 +17,7 @@
 		3C014BC5232913C200C400D6 /* ShowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C014BC4232913C200C400D6 /* ShowsTableViewCell.swift */; };
 		3C014BC72329233600C400D6 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C014BC62329233600C400D6 /* NetworkHelper.swift */; };
 		3C014BC9232923AF00C400D6 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C014BC8232923AF00C400D6 /* AppError.swift */; };
-		3C014BCC2329246000C400D6 /* ProjectAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C014BCB2329246000C400D6 /* ProjectAPIClient.swift */; };
+		3C014BCE23294C5B00C400D6 /* ShowsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C014BCD23294C5B00C400D6 /* ShowsAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		3C014BC4232913C200C400D6 /* ShowsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsTableViewCell.swift; sourceTree = "<group>"; };
 		3C014BC62329233600C400D6 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		3C014BC8232923AF00C400D6 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		3C014BCB2329246000C400D6 /* ProjectAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAPIClient.swift; sourceTree = "<group>"; };
+		3C014BCD23294C5B00C400D6 /* ShowsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +112,8 @@
 		3C014BCA232923E300C400D6 /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
+				3C014BCD23294C5B00C400D6 /* ShowsAPIClient.swift */,
 				3C014BC62329233600C400D6 /* NetworkHelper.swift */,
-				3C014BCB2329246000C400D6 /* ProjectAPIClient.swift */,
 				3C014BC8232923AF00C400D6 /* AppError.swift */,
 			);
 			path = HelperFiles;
@@ -220,10 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C014BCE23294C5B00C400D6 /* ShowsAPIClient.swift in Sources */,
 				3C014BA3232910B800C400D6 /* ShowsViewController.swift in Sources */,
 				3C014BA1232910B800C400D6 /* AppDelegate.swift in Sources */,
 				3C014BC9232923AF00C400D6 /* AppError.swift in Sources */,
-				3C014BCC2329246000C400D6 /* ProjectAPIClient.swift in Sources */,
 				3C014BC72329233600C400D6 /* NetworkHelper.swift in Sources */,
 				3C014BC5232913C200C400D6 /* ShowsTableViewCell.swift in Sources */,
 				3C014BC3232911B300C400D6 /* ShowsModel.swift in Sources */,

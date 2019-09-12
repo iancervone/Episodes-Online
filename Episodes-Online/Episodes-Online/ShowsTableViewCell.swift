@@ -13,7 +13,7 @@ class ShowsTableViewCell: UITableViewCell {
   @IBOutlet weak var showImage: UIImageView!
   @IBOutlet weak var showTitleLabel: UILabel!
   @IBOutlet weak var showRatingLabel: UILabel!
-  
+ 
   
     override func awakeFromNib() {
         super.awakeFromNib()
