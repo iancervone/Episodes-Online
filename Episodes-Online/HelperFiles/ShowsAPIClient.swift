@@ -57,6 +57,7 @@ struct ShowsAPIClient {
           completionHandler(.success(shows))
         }
         catch {
+          print(error)
           completionHandler(.failure(.couldNotParseJSON(rawError: error)))
 
         }

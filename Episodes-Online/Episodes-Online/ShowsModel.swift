@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct ShowResponse: Codable {
   let shows: Show?
   
-  private enum codingKeys: String, CodingKey {
+  private enum CodingKeys: String, CodingKey {
     case shows = "show"
   }
 }
@@ -19,7 +20,7 @@ struct ShowResponse: Codable {
 struct Show: Codable {
   let name: String
   let rating: Rating
-  let image: Image
+  let image: Image?
   
   static func getShows(from jsonData: Data) throws -> [ShowResponse] {
     let response = try JSONDecoder().decode([ShowResponse].self, from: jsonData)
@@ -28,7 +29,7 @@ struct Show: Codable {
 }
 
 struct Rating: Codable {
-  let average: Double
+  let average: Double?
 }
 
 struct Image: Codable {
