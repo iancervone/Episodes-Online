@@ -19,23 +19,23 @@ class ShowsViewController: UIViewController {
       }
     }
   
-  var searchString: String = "girls" {
+  var searchString: String? = nil {
     didSet {
+      showsTableView.reloadData()
       loadData()
     }
   }
-  
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 150
+    
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    showsTableView.dataSource = self
+    showsTableView.delegate = self
+    showsSearchBar.delegate = self
+    loadData()
   }
-  
-//  func loadData() {
-////    let urlString = "http://api.tvmaze.com/search/shows?q=girls"
-//    ShowsAPIClient.manager.getShows(completionHandler: <#T##(Result<[Show], AppError>) -> Void#>)
-//
-  
-  func loadData() {
-      ShowsAPIClient.manager.getShows { (result) in
+
+  private func loadData() {
+    ShowsAPIClient.manager.getShows(from: searchString ?? "girls") { (result) in
         DispatchQueue.main.async { [weak self] in
           switch result {
           case let .success(shows):
@@ -52,37 +52,35 @@ class ShowsViewController: UIViewController {
     alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
     present(alertVC, animated: true, completion: nil)
   }
-    
-    
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    showsTableView.dataSource = self
-    showsTableView.delegate = self
-    loadData()
-    
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 300
   }
-
+  
 }
 
-extension ShowsViewController: UITableViewDelegate {
-}
 
-extension ShowsViewController: UITableViewDataSource{
+extension ShowsViewController: UITableViewDelegate, UITableViewDataSource{
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return shows.count
   }
-  
-  
-  //  THE SHOWS RATING MAY NEED TO BE AN OPTIONAL VALUE, THERE IS SOME CASES WHERE A SHOW HAS NOT YET BEEN RATED.  HOW WILL THIS BE HANDLED
-  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let showResults = shows[indexPath.row]
     let cell = showsTableView.dequeueReusableCell(withIdentifier: "showsCell", for: indexPath) as! ShowsTableViewCell
     cell.showTitleLabel?.text = showResults.shows?.name
     cell.showRatingLabel?.text = showResults.shows?.rating.average?.description
     return cell
-    
   }
-  
+}
+
+
+extension ShowsViewController: UISearchBarDelegate {
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    searchString = searchBar.text?.lowercased()
+    loadData()
+  }
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    showsSearchBar.resignFirstResponder()
+  }
   
 }

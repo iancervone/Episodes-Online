@@ -7,6 +7,53 @@
 //
 import Foundation
 
+
+struct ShowsAPIClient {
+
+  static let manager = ShowsAPIClient()
+//  let showsURL = "http://api.tvmaze.com/search/shows?q=girls"
+
+  func getShows(from search: String, completionHandler: @escaping (Result<[ShowResponse], AppError>) -> Void) {
+    guard let showURL = URL(string: "https://api.tvmaze.com/search/shows?q=\(search)") else {
+      fatalError()
+    }
+    NetworkHelper.manager.getData(from: showURL) { result in
+      switch result {
+      case .failure(let error):
+        completionHandler(.failure(error))
+        return
+      case .success(let data):
+        do {
+          let showInfo = try Show.getShows(from: data)
+          completionHandler(.success(showInfo))
+        }
+        catch {
+          print(error)
+          completionHandler(.failure(.couldNotParseJSON(rawError: error)))
+
+        }
+      }
+    }
+  }
+
+  
+
+  private init() {}
+}
+
+
+//var showsURL: URL {
+//  guard let url = URL(string: "https://api.tvmaze.com/search/shows?q=girls") else {
+//    fatalError("Error: Invalid URL")
+//  }
+//  return url
+//}
+
+
+
+
+
+
 //enum BenResult<Success, Failure:Error> {
 //  case success(Success)
 //  case failure(Failure)
@@ -35,53 +82,5 @@ import Foundation
 //      }.resume()
 //  }
 //}
-
-
-
-
-
-struct ShowsAPIClient {
-
-  static let manager = ShowsAPIClient()
-//  let showsURL = "http://api.tvmaze.com/search/shows?q=girls"
-
-  func getShows(completionHandler: @escaping (Result<[ShowResponse], AppError>) -> Void) {
-    NetworkHelper.manager.getData(from: showsURL) { result in
-      switch result {
-      case let .failure(error):
-        completionHandler(.failure(error))
-        return
-      case let .success(data):
-        do {
-          let shows = try Show.getShows(from: data)
-          completionHandler(.success(shows))
-        }
-        catch {
-          print(error)
-          completionHandler(.failure(.couldNotParseJSON(rawError: error)))
-
-        }
-      }
-    }
-  }
-
-  // MARK: - Private Properties and Initializers
-
-  
-
-  private init() {}
-}
-
-
-var showsURL: URL {
-  guard let url = URL(string: "https://api.tvmaze.com/search/shows?q=girls") else {
-    fatalError("Error: Invalid URL")
-  }
-  return url
-}
-
-
-
-
 
 
