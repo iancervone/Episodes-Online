@@ -76,7 +76,8 @@ extension ShowsViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension ShowsViewController: UISearchBarDelegate {
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    searchString = searchBar.text?.lowercased()
+    searchString = searchBar.text?.lowercased().replacingOccurrences(of: " ", with: "+")
+    
     loadData()
   }
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
