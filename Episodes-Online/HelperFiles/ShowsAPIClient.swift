@@ -67,18 +67,18 @@ struct ShowsAPIClient {
 
   // MARK: - Private Properties and Initializers
 
-  private var showsURL: URL {
-    guard let url = URL(string: "https://api.tvmaze.com/search/shows?q=girls") else {
-      fatalError("Error: Invalid URL")
-    }
-    return url
-  }
+  
 
   private init() {}
 }
 
 
-
+var showsURL: URL {
+  guard let url = URL(string: "https://api.tvmaze.com/search/shows?q=girls") else {
+    fatalError("Error: Invalid URL")
+  }
+  return url
+}
 
 
 
