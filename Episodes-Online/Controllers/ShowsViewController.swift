@@ -66,9 +66,22 @@ extension ShowsViewController: UITableViewDelegate, UITableViewDataSource{
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let showResults = shows[indexPath.row]
-    let cell = showsTableView.dequeueReusableCell(withIdentifier: "showsCell", for: indexPath) as! ShowsTableViewCell
+    guard let cell = showsTableView.dequeueReusableCell(withIdentifier: "showsCell", for: indexPath) as? ShowsTableViewCell else {
+      return UITableViewCell()
+    }
     cell.showTitleLabel?.text = showResults.shows?.name
     cell.showRatingLabel?.text = showResults.shows?.rating.average?.description
+    guard let urlStr = showResults.shows?.image?.medium else { return cell }
+    ImageHelper.shared.getImage(urlStr: urlStr) {(result) in
+      DispatchQueue.main.async {
+        switch result {
+        case .failure (let error):
+          print(error)
+        case .success (let image):
+          cell.showImage.image = image
+        }
+      }
+    }
     return cell
   }
 }
