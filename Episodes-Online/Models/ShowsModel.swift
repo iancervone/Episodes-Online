@@ -20,7 +20,6 @@ struct ShowResponse: Codable {
 
 
 struct Show: Codable {
-  let id: Int
   let name: String
   let rating: Rating
   let image: Image?
