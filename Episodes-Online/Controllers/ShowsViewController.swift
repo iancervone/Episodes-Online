@@ -57,6 +57,17 @@ class ShowsViewController: UIViewController {
     return 300
   }
   
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if let destinationVC = segue.destination as? EpisodesViewController {
+          let selectedRow = showsTableView.indexPathForSelectedRow?.row
+          let showsEpisodes = shows[selectedRow!]
+          destinationVC.selectedShow = showsEpisodes
+      }
+  }
+  
+  
+  
 }
 
 
