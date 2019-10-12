@@ -21,13 +21,14 @@ class EpisodesViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpViews()
     }
+  
+
   
   private func setUpViews() {
     showNameLabel.text = selectedShow.shows?.name
   }
-    
 }
 
 extension EpisodesViewController: UITableViewDelegate, UITableViewDataSource {
