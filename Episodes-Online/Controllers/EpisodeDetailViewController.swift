@@ -25,7 +25,7 @@ class EpisodeDetailViewController: UIViewController {
     sNameLabel.text = showName
     eNumberLabel.text = "season: \(selectedEpisode.season) episode: \(selectedEpisode.number)"
     eNameLabel.text = selectedEpisode.name
-    eSummaryLabel.text = selectedEpisode.summary?
+    eSummaryLabel.text = selectedEpisode.summary?.replacingOccurrences(of: "<p>", with: "").replacingOccurrences(of: "</p>", with: "")
   }
     
 
