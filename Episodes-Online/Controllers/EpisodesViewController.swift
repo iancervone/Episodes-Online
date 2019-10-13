@@ -73,12 +73,23 @@ extension EpisodesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     let episode = showsEpisodes[indexPath.row]
     cell.episodeNameLabel.text = episode.name
-    cell.episodeNumLabel.text = "season \(episode.season) : episode \(episode.number)"
+    cell.episodeNumLabel.text = "S:\(episode.season)  E:\(episode.number)"
+    guard let urlStr = episode.image?.medium else { return cell }
+       ImageHelper.shared.getImage(urlStr: urlStr) {(result) in
+         DispatchQueue.main.async {
+           switch result {
+           case .failure (let error):
+             print(error)
+           case .success (let image):
+             cell.episodeImageView.image = image
+           }
+         }
+      }
     return cell
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 200
+    return 130
   }
   
 }
