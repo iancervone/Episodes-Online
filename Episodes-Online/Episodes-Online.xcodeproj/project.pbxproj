@@ -23,6 +23,7 @@
 		3C4B9C1D232BF4C600890E66 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B9C1C232BF4C600890E66 /* ImageHelper.swift */; };
 		3C94FE9D23512C02000D32F0 /* EpisodesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94FE9C23512C02000D32F0 /* EpisodesModel.swift */; };
 		3C94FE9F23512E2B000D32F0 /* EpisodesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94FE9E23512E2B000D32F0 /* EpisodesAPIClient.swift */; };
+		3CF1AA162352AC3600A5B12F /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1AA152352AC3600A5B12F /* EpisodeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		3C4B9C1C232BF4C600890E66 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		3C94FE9C23512C02000D32F0 /* EpisodesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesModel.swift; sourceTree = "<group>"; };
 		3C94FE9E23512E2B000D32F0 /* EpisodesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesAPIClient.swift; sourceTree = "<group>"; };
+		3CF1AA152352AC3600A5B12F /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				3C014BA4232910B800C400D6 /* Main.storyboard */,
+				3CF1AA152352AC3600A5B12F /* EpisodeDetailViewController.swift */,
 				3C014BC2232911B300C400D6 /* ShowsModel.swift */,
 				3C94FE9C23512C02000D32F0 /* EpisodesModel.swift */,
 			);
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C014BCE23294C5B00C400D6 /* ShowsAPIClient.swift in Sources */,
+				3CF1AA162352AC3600A5B12F /* EpisodeDetailViewController.swift in Sources */,
 				3C014BA3232910B800C400D6 /* ShowsViewController.swift in Sources */,
 				3C94FE9D23512C02000D32F0 /* EpisodesModel.swift in Sources */,
 				3C014BA1232910B800C400D6 /* AppDelegate.swift in Sources */,
