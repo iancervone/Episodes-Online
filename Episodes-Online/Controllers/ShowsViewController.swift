@@ -35,7 +35,7 @@ class ShowsViewController: UIViewController {
   }
 
   private func loadData() {
-    ShowsAPIClient.manager.getShows(from: searchString ?? "girls") { (result) in
+    ShowsAPIClient.manager.getShows(from: searchString ?? "") { (result) in
         DispatchQueue.main.async { [weak self] in
           switch result {
           case let .success(shows):

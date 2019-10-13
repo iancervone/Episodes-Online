@@ -5,8 +5,8 @@ struct EpisodesAPIClient {
 
   static let manager = EpisodesAPIClient()
   
-  func getEpisodess(completionHandler: @escaping (Result<[Episode], AppError>) -> Void) {
-     let episodeURL = "http://api.tvmaze.com/shows/21835/episodes"
+  func getEpisodes(from id: String, completionHandler: @escaping (Result<[Episode], AppError>) -> Void) {
+     let episodeURL = "http://api.tvmaze.com/shows/\(id)/episodes"
      guard let url = URL(string: episodeURL) else {
        completionHandler(.failure(.badURL))
        return
