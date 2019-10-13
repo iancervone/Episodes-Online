@@ -60,6 +60,18 @@ class EpisodesViewController: UIViewController {
   
   
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if let destinationVC = segue.destination as? EpisodeDetailViewController {
+          let selectedRow = episodeTableView.indexPathForSelectedRow?.row
+          let detailEpisode = showsEpisodes[selectedRow!]
+          destinationVC.selectedEpisode = detailEpisode
+        destinationVC.showName = selectedShow.shows!.name
+      }
+  }
+  
+  
+  
+  
 }
 
 extension EpisodesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -73,7 +85,7 @@ extension EpisodesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     let episode = showsEpisodes[indexPath.row]
     cell.episodeNameLabel.text = episode.name
-    cell.episodeNumLabel.text = "S:\(episode.season)  E:\(episode.number)"
+    cell.episodeNumLabel?.text = "S:\(episode.season)  E:\(episode.number)"
     guard let urlStr = episode.image?.medium else { return cell }
        ImageHelper.shared.getImage(urlStr: urlStr) {(result) in
          DispatchQueue.main.async {

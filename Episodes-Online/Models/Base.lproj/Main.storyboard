@@ -120,6 +120,7 @@
                                             <outlet property="episodeImageView" destination="ZIh-nl-Iec" id="V3a-PA-Ien"/>
                                             <outlet property="episodeNameLabel" destination="Ddv-mg-L9U" id="NlH-gI-34N"/>
                                             <outlet property="episodeNumLabel" destination="Y5M-jE-ykJ" id="tKn-3s-DLB"/>
+                                            <segue destination="A7j-v4-nmb" kind="show" identifier="episodeDetailSegue" id="fOV-HH-MWj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -147,15 +148,15 @@
             </objects>
             <point key="canvasLocation" x="1053.6231884057972" y="2.6785714285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--Episode Detail View Controller-->
         <scene sceneID="oec-tB-UFr">
             <objects>
-                <viewController id="A7j-v4-nmb" sceneMemberID="viewController">
+                <viewController id="A7j-v4-nmb" customClass="EpisodeDetailViewController" customModule="Episodes_Online" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOi-cH-91x">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E Summary" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyq-um-R7m">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E Summary" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyq-um-R7m">
                                 <rect key="frame" x="20" y="471" width="374" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -169,7 +170,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E Num" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5M-jE-ykJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5M-jE-ykJ">
                                 <rect key="frame" x="0.0" y="90" width="414" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -191,6 +192,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Q85-IO-6n1"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uSL-5s-cPz"/>
+                    <connections>
+                        <outlet property="eDetailImageView" destination="keo-nt-tFN" id="LiM-H0-p5z"/>
+                        <outlet property="eNameLabel" destination="hRx-gW-3I3" id="ZGg-af-Npc"/>
+                        <outlet property="eNumberLabel" destination="Y5M-jE-ykJ" id="EDl-PX-PHx"/>
+                        <outlet property="eSummaryLabel" destination="kyq-um-R7m" id="Cy6-uH-QWY"/>
+                        <outlet property="sNameLabel" destination="6J8-fM-1Mo" id="tCM-tE-Fai"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTg-c2-CP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
