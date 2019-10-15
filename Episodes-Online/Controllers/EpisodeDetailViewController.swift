@@ -10,6 +10,8 @@ class EpisodeDetailViewController: UIViewController {
   
   @IBOutlet weak var eDetailImageView: UIImageView!
   
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  
   var selectedEpisode: Episode!
   
   var showName = String()
@@ -33,12 +35,15 @@ class EpisodeDetailViewController: UIViewController {
   func setImage() {
       
     if let detailImage = selectedEpisode.image?.original {
+      activityIndicator.startAnimating()
       ImageHelper.shared.getImage(urlStr: selectedEpisode.image!.original) { (result) in
               DispatchQueue.main.async {
                   switch result {
                   case .failure(let error):
+                    self.activityIndicator.stopAnimating()
                       print(error)
                   case .success(let image):
+                    self.activityIndicator.stopAnimating()
                   self.eDetailImageView.image = image
                   }
               }

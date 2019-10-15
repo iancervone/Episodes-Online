@@ -29,29 +29,3 @@ struct EpisodesAPIClient {
   private init() {}
 }
 
-
-
-//  func getEpisodes(from search: String, completionHandler: @escaping (Result<Episode, AppError>) -> Void) {
-//    guard let episodeURL = URL(string: "http://api.tvmaze.com/shows/21835/episodes") else {
-//      fatalError()
-//    }
-//    NetworkHelper.manager.getData(from: episodeURL) { result in
-//      switch result {
-//      case .failure(let error):
-//        completionHandler(.failure(error))
-//        return
-//      case .success(let data):
-//        do {
-//          let episodeInfo = try Episode.getEpisodes(from: data)
-//          completionHandler(.success(episodeInfo))
-//        }
-//        catch {
-//          print(error)
-//          completionHandler(.failure(.couldNotParseJSON(rawError: error)))
-//        }
-//      }
-//    }
-//  }
-  
-  
-  
